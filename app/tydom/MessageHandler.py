@@ -391,9 +391,11 @@ class MessageHandler:
         data = incoming
         msg_type = None
         first = str(data[:40])
-
+        logger.debug("Message is:")
+        logger.debug(incoming)
         if data != "":
-            if "id_catalog" in data:
+            # if "id_catalog" in data:
+            if "android" in data:
                 msg_type = "msg_config"
             elif "cmetadata" in data:
                 msg_type = "msg_cmetadata"
@@ -580,6 +582,8 @@ class MessageHandler:
             logger.debug(parsed)
 
     async def parse_endpoint_data(self, endpoint, device_id):
+        logger.debug("Parsing endpoing...")
+        logger.debug(endpoint)
         if endpoint["error"] == 0 and len(endpoint["data"]) > 0:
             try:
                 attr_alarm = {}
