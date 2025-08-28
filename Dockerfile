@@ -1,6 +1,8 @@
-FROM python:3.11-alpine3.17
+#FROM python:3.11-alpine3.17
+ARG BUILD_FROM=ghcr.io/hassio-addons/base-python:3.11-alpine
+FROM ${BUILD_FROM}
 
-LABEL org.opencontainers.image.description="Deltadore Tydom to MQTT Bridge"
+#LABEL org.opencontainers.image.description="Deltadore Tydom to MQTT Bridge"
 
 # App base dir
 WORKDIR /app
