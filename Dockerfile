@@ -1,5 +1,5 @@
 #FROM python:3.11-alpine3.17
-ARG BUILD_FROM=ghcr.io/hassio-addons/base-python:3.11-alpine
+ARG BUILD_FROM=ghcr.io/hassio-addons/base-python:eb04110
 FROM ${BUILD_FROM}
 
 #LABEL org.opencontainers.image.description="Deltadore Tydom to MQTT Bridge"
